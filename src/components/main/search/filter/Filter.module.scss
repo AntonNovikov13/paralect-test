@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Poppins:wght@600&display=swap');
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border: 1px solid #eaebed;
+    border-radius: 10px;
+    margin-right: 28px;
+    padding: 20px;
+    height: 360px;
+}
+
+.filter__header {
+    display: flex;
+}
+.filter__header_name {
+    margin-right: 67px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+}
+.filter__header_btn {
+    background: none;
+    border: none;
+    font-size: 14px;
+    color: grey;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.title {
+    font-style: normal;
+    font-weight: 700;
+}
+
+.title,
+.salary__radius_from {
+    margin-bottom: 8px;
+}
+
+.filter__inputs {
+    width: 275px;
+    height: 42px;
+    border: 1px solid #d5d6dc;
+    border-radius: 5px;
+    outline: none;
+    padding: 0;
+    color: #acadb9;
+    font-size: 14px;
+}
+
+.apply__button {
+    height: 40px;
+    background: #5e96fc;
+    color: #ffffff;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    font-weight: 500;
+}

@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400&family=Poppins:wght@600&display=swap');
+
+* {
+    font-family: 'Inter', inherit;
+}
+.vacancy {
+    min-width: 773px;
+    max-width: 773px;
+    color: #232134;
+    display: flex;
+    margin: 40px auto 51px;
+}
+
+.vacancy__header {
+    font-weight: 700;
+    margin-bottom: 20px;
+    border: 1px solid #eaebed;
+    border-radius: 12px;
+    background: #ffffff;
+    padding: 24px;
+}
+.vacancy__description {
+    background: #ffffff;
+    border: 1px solid #eaebed;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.selected__vacancy_list_item_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 12.5px;
+}
+.selected__vacancy_list_item_salary_dot_type_work {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 13px;
+}
+
+.selected__vacancy_name,
+.selected__vacancy_salary_from_to,
+.selected__vacancy_location,
+.dot,
+.selected__vacancy_type_of_work {
+    margin: 0;
+}
+.selected__vacancy_name {
+    font-weight: 700;
+    font-size: 28px;
+}
+.selected__vacancy_list_item_location_town {
+    display: flex;
+    flex-direction: row;
+}
+.selected__vacancy_type_of_work,
+.selected__vacancy_location {
+    font-size: 16px;
+    font-weight: 400;
+}
+.location-icon {
+    width: 13.33px;
+    height: 16.09px;
+    padding-right: 11.33px;
+}
+.selected__vacancy_salary_from_to {
+    font-weight: 7 00;
+    font-size: 16px;
+}
+.selected__vacancy_salary_from_to,
+.dot {
+    margin-right: 12px;
+}
+.dot {
+    width: 9px;
+    height: 21px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #7b7c88;
+}
+
+.vacancy_name,
+.favorites_name {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.location_icon {
+    width: 13.33px;
+    height: 16.09px;
+    padding-right: 11.33px;
+}
+
+.addtoFavotire_btn {
+    width: 22px;
+    height: 22px;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+}
+
+.vacancy__description_child {
+    color: black;
+}
+
+.location__class {
+    font-weight: 400;
+}

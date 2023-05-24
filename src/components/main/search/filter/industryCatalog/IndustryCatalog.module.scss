@@ -1,0 +1,23 @@
+select {
+    width: 275px;
+    height: 42px;
+    border: 1px solid #d5d6dc;
+    border-radius: 5px;
+    outline: none;
+    padding: 0;
+    color: #acadb9;
+    font-size: 14px;
+}
+
+select option {
+    color: #232134;
+    background: #ffffff;
+    padding: 8px 12px;
+}
+
+select option:hover {
+    background: #5e96fc;
+    border-radius: 8px;
+    color: #ffffff;
+    outline: none;
+}

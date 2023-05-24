@@ -1,0 +1,83 @@
+* {
+    text-decoration: none;
+}
+*:visited {
+    color: #232134;
+}
+.vacancy__list_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px;
+    height: auto;
+    background: #ffffff;
+    border: 1px solid #eaebed;
+    border-radius: 12px;
+}
+
+.vacancy__list_item_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 12.5px;
+    color: #5e96fc;
+    font-weight: 600;
+}
+.vacancy__list_item_salary_dot_type_work {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 13px;
+}
+
+.vacancy_name,
+.vacancy_salary_from_to,
+.vacancy_location,
+.dot,
+.vacancy_type_of_work {
+    margin: 0;
+}
+.vacancy_type_of_work {
+    font-weight: 400;
+}
+.vacancy_name {
+    font-weight: 600;
+    font-size: 20px;
+}
+.vacancy__list_item_location_town {
+    display: flex;
+    flex-direction: row;
+}
+.vacancy_type_of_work,
+.vacancy_location {
+    font-size: 16px;
+    font-weight: 400;
+}
+.location_icon {
+    width: 13.33px;
+    height: 16.09px;
+    padding-right: 11.33px;
+}
+.vacancy_salary_from_to {
+    font-weight: 600;
+    font-size: 16px;
+}
+.vacancy_salary_from_to,
+.dot {
+    margin-right: 12px;
+}
+.dot {
+    width: 9px;
+    height: 21px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #7b7c88;
+}
+.addtoFavotire_btn {
+    position: relative;
+    left: 726px;
+    bottom: 150px;
+    width: 22px;
+    height: 22px;
+    outline: none;
+    cursor: pointer;
+}

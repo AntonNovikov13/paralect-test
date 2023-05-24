@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;700&family=Poppins:wght@600&display=swap');
+* {
+    font-family: 'Inter', sans-serif;
+}
+.favorites__list {
+    height: 900px;
+    margin: 0 auto;
+}
+
+.favorites__list_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 773px;
+    max-width: 773px;
+    margin: 40px auto 16px;
+    padding: 24px;
+    height: auto;
+    background: #ffffff;
+    border: 1px solid #eaebed;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.favorites__list__item_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 12.5px;
+}
+.favorites__list__item_salary_dot_type_work {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 13px;
+}
+
+.favorites_name,
+.favorites_salary_from_to,
+.favorites_location,
+.dot,
+.favorites_type_of_work {
+    margin: 0;
+}
+.favorites_name {
+    color: #5e96fc;
+    font-weight: 600;
+    font-size: 28px;
+}
+.favorites__list__item_location_town {
+    display: flex;
+    flex-direction: row;
+}
+.favorites_type_of_work,
+.favorites_location {
+    font-size: 16px;
+    font-weight: 400;
+}
+.favorites_salary_from_to,
+.dot {
+    margin-right: 12px;
+}
+
+.location_icon {
+    width: 13.33px;
+    height: 16.09px;
+    padding-right: 11.33px;
+}
+
+.addtoFavotire_btn {
+    position: relative;
+    left: 1300px;
+    bottom: 190px;
+    width: 22px;
+    height: 22px;
+    outline: none;
+    cursor: pointer;
+}
