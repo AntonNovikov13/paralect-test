@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/paralect-test/static/css/main.6aa88316.css",
+    "main.js": "/paralect-test/static/js/main.11440a7f.js",
+    "static/media/emptyhuman.png": "/paralect-test/static/media/emptyhuman.1f3607bd389fbbcdf630.png",
+    "index.html": "/paralect-test/index.html",
+    "main.6aa88316.css.map": "/paralect-test/static/css/main.6aa88316.css.map",
+    "main.11440a7f.js.map": "/paralect-test/static/js/main.11440a7f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6aa88316.css",
+    "static/js/main.11440a7f.js"
+  ]
+}
