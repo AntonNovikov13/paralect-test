@@ -10,7 +10,7 @@ export const Filter = ({
     setSalaryTo,
     industryValue,
     setIndustryValue,
-    setSubmitButton,
+    getVacancies,
 }) => {
     return (
         <>
@@ -23,7 +23,7 @@ export const Filter = ({
                 setSalaryTo={setSalaryTo}
                 industryValue={industryValue}
                 setIndustryValue={setIndustryValue}
-                setSubmitButton={setSubmitButton}
+                getVacancies={getVacancies}
             />
         </>
     );

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './IndustryCatalog.module.scss';
 
-export const IndustryCatalog = ({ industryCatalog, setIndustryValue }) => {
+export const IndustryCatalog = ({ industryValue, industryCatalog, setIndustryValue }) => {
     return (
         <div className={styles.industry__list}>
             <div className={styles.industry__list_item}>
@@ -14,6 +14,7 @@ export const IndustryCatalog = ({ industryCatalog, setIndustryValue }) => {
                         onChange={(event) =>
                             setIndustryValue(event.target.value)
                         }
+                        value={industryValue}
                         required
                     >
                         <option value=''>Выберите отрасль</option>

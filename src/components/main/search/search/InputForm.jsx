@@ -6,9 +6,6 @@ import styles from './Search.module.scss';
 export const InputForm = ({
     searchValue,
     setSearchValue,
-    salaryFrom,
-    salaryTo,
-    industryValue,
     getVacancies,
 }) => {
     return (
@@ -24,9 +21,6 @@ export const InputForm = ({
 
             <ButtonSearch
                 searchValue={searchValue}
-                salaryFrom={salaryFrom}
-                salaryTo={salaryTo}
-                industryValue={industryValue}
                 getVacancies={getVacancies}
             />
         </form>

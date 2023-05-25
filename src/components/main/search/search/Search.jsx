@@ -7,9 +7,6 @@ import { InputForm } from './InputForm';
 export const Search = ({
     searchValue,
     setSearchValue,
-    salaryFrom,
-    salaryTo,
-    industryValue,
     vacancies,
     getVacancies,
     favorites,
@@ -45,9 +42,6 @@ export const Search = ({
                 <InputForm
                     searchValue={searchValue}
                     setSearchValue={setSearchValue}
-                    salaryFrom={salaryFrom}
-                    salaryTo={salaryTo}
-                    industryValue={industryValue}
                     getVacancies={getVacancies}
                 />
 

@@ -3,6 +3,7 @@ import { ButtonReset } from './ButtonReset';
 import { IndustryCatalog } from './industryCatalog/IndustryCatalog';
 import { InputSalaryFrom } from './InputSalaryFrom';
 import { InputSalaryTo } from './InputSalaryTo';
+import { FilterApplyButton } from './FilterApplyButton';
 import styles from './Filter.module.scss';
 
 export const FilterItem = ({
@@ -14,12 +15,8 @@ export const FilterItem = ({
     setSalaryTo,
     industryValue,
     setIndustryValue,
-    setSubmitButton,
+    getVacancies,
 }) => {
-    const submitFilterForm = () => {
-        setSubmitButton(true);
-    };
-
     return (
         <div className={styles.filter}>
             <div className={styles.filter__header}>
@@ -37,13 +34,12 @@ export const FilterItem = ({
                 setSalaryFrom={setSalaryFrom}
             />
             <InputSalaryTo salaryTo={salaryTo} setSalaryTo={setSalaryTo} />
-            <button
-                data-elem="search-button"
-                className={styles.apply__button}
-                onClick={submitFilterForm}
-            >
-                Применить
-            </button>
+            <FilterApplyButton
+                salaryFrom={salaryFrom}
+                salaryTo={salaryTo}
+                industryValue={industryValue}
+                getVacancies={getVacancies}
+            />
         </div>
     );
 };
