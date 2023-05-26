@@ -1,19 +1,31 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { FavoriteListItem } from '../../components/main/favorites/FavoriteListItem';
+import { Pagination } from '../../components/main/pagination/Pagination';
 
-export const FavoritesListPage = ({ favorites, handleToggleFavorite }) => {
-    const [fav, setFav] = useState([]);
-    useEffect(() => {
-        const savedFavorites = JSON.parse(localStorage.getItem('favorites'));
-
-        setFav([savedFavorites]);
-    }, []);
-
+export const FavoritesListPage = ({
+    favorites,
+    handleToggleFavorite,
+    setFavorites,
+    totalPages,
+    currentPage,
+    changeCurrentPage,
+    setPrevPage,
+    setNextPage,
+}) => {
     return (
-        <FavoriteListItem
-            favorites={favorites}
-            handleToggleFavorite={handleToggleFavorite}
-            fav={fav}
-        />
+        <>
+            <FavoriteListItem
+                setFavorites={setFavorites}
+                favorites={favorites}
+                handleToggleFavorite={handleToggleFavorite}
+            />
+            <Pagination
+                totalPages={totalPages}
+                currentPage={currentPage}
+                changeCurrentPage={changeCurrentPage}
+                setPrevPage={setPrevPage}
+                setNextPage={setNextPage}
+            />
+        </>
     );
 };

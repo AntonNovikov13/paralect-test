@@ -18,7 +18,6 @@ export const VacancyPage = ({ vacancies, favorites, handleToggleFavorite }) => {
                     const {
                         id,
                         profession,
-                        firm_name,
                         payment_from,
                         payment_to,
                         currency,
@@ -37,7 +36,6 @@ export const VacancyPage = ({ vacancies, favorites, handleToggleFavorite }) => {
                                     favorites={favorites}
                                     handleToggleFavorite={handleToggleFavorite}
                                 />
-                                <p>{firm_name}</p>
                                 <VacancyPageSalaryWork
                                     payment_from={payment_from}
                                     payment_to={payment_to}

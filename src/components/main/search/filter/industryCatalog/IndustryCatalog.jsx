@@ -1,7 +1,11 @@
 import React from 'react';
 import styles from './IndustryCatalog.module.scss';
 
-export const IndustryCatalog = ({ industryValue, industryCatalog, setIndustryValue }) => {
+export const IndustryCatalog = ({
+    industryValue,
+    industryCatalog,
+    setIndustryValue,
+}) => {
     return (
         <div className={styles.industry__list}>
             <div className={styles.industry__list_item}>

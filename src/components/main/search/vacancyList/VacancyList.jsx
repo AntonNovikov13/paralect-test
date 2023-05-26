@@ -15,7 +15,6 @@ export const VacancyList = ({
                     const {
                         id,
                         profession,
-                        firm_name,
                         payment_from,
                         payment_to,
                         currency,
@@ -27,7 +26,6 @@ export const VacancyList = ({
                             <VacancyListCard
                                 id={id}
                                 profession={profession}
-                                firm_name={firm_name}
                                 payment_from={payment_from}
                                 payment_to={payment_to}
                                 currency={currency}

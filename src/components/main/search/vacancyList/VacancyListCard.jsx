@@ -5,7 +5,6 @@ import styles from './VacancyList.module.scss';
 export const VacancyListCard = ({
     id,
     profession,
-    firm_name,
     payment_from,
     payment_to,
     currency,
@@ -14,7 +13,7 @@ export const VacancyListCard = ({
 }) => {
     return (
         <Link
-            to='/vacancy'
+            to={`/vacancy/${id}`}
             state={{ id }}
             className={styles.vacancy__list_item}
             data-elem={`vacancy-${id}`}
@@ -23,7 +22,6 @@ export const VacancyListCard = ({
                 <div className={styles.vacancy__list_item_header}>
                     {profession}
                 </div>
-                <p>{firm_name}</p>
                 <div className={styles.vacancy__list_item_salary_dot_type_work}>
                     <p className={styles.vacancy_salary_from_to}>
                         з/п от {payment_from} - до {payment_to} {currency}

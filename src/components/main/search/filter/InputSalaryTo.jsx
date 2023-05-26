@@ -7,7 +7,7 @@ export const InputSalaryTo = ({ salaryTo, setSalaryTo }) => {
             <input
                 type='number'
                 placeholder='До'
-                className={styles.filter__inputs}
+                className={`${styles.salary__radius_to} ${styles.filter__inputs}`}
                 value={salaryTo}
                 onChange={(event) => setSalaryTo(event.target.value)}
                 data-elem="salary-to-input"

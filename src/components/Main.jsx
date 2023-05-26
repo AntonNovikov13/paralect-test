@@ -6,23 +6,22 @@ import { SearchPage } from '../pages/searchPage/SearchPage';
 import { VacancyPage } from '../pages/vacancyPage/VacancyPage';
 import { FavoritesListPage } from '../pages/favoritesPage/FavoritesListPage';
 import { EmptyPage } from '../pages/emptyPage/EmptyPage';
+import useLocalStorage from './main/hook/useLocalStorageHook';
 
 const Main = () => {
-    const [vacancies, setVacancies] = useState([]);
-    const [favorites, setFavorites] = useState([]);
     const [accessToken, setAccessToken] = useState('');
+    const [vacancies, setVacancies] = useState([]);
+    const [favorites, setFavorites] = useLocalStorage('favorites', []);
 
-    const handleToggleFavorite = (vacancy) => {
-        if (favorites.some((el) => el.id === vacancy.id)) {
-            setFavorites(
-                favorites.filter((selectedId) => selectedId.id !== vacancy.id)
+    const handleToggleFavorite = (currenVacancy) => {
+        const favorite = favorites.find(({ id }) => id === currenVacancy.id);
+        if (favorite) {
+            setFavorites((prevFav) =>
+                prevFav.filter(({ id }) => id !== favorite.id)
             );
-        } else {
-            const res = [...favorites];
-            res.push(vacancy);
-            setFavorites(res);
+            return;
         }
-        localStorage.setItem('favorites', JSON.stringify(vacancy));
+        setFavorites((prevVacancy) => [...prevVacancy, currenVacancy]);
     };
 
     return (
@@ -46,7 +45,7 @@ const Main = () => {
                         }
                     />
                     <Route
-                        path='/vacancy'
+                        path='/vacancy/:id'
                         element={
                             <VacancyPage
                                 vacancies={vacancies}

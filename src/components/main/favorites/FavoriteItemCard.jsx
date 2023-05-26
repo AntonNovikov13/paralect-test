@@ -5,7 +5,6 @@ import styles from './FavoritesList.module.scss';
 export const FavoriteItemCard = ({
     id,
     profession,
-    firm_name,
     payment_from,
     payment_to,
     currency,
@@ -14,7 +13,11 @@ export const FavoriteItemCard = ({
 }) => {
     return (
         <>
-            <Link to='/vacancy' state={{ id }} className={styles.vacancy_name}>
+            <Link
+                to={`/vacancy/${id}`}
+                state={{ id }}
+                className={styles.vacancy_name}
+            >
                 <div
                     key={id}
                     className={styles.favorites__list_item}
@@ -23,7 +26,6 @@ export const FavoriteItemCard = ({
                     <div className={styles.favorites__list__item_header}>
                         <p className={styles.favorites_name}>{profession}</p>
                     </div>
-                    <p>{firm_name}</p>
                     <div
                         className={
                             styles.favorites__list__item_salary_dot_type_work

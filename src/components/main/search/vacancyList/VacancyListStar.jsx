@@ -2,10 +2,10 @@ import React from 'react';
 import styles from './VacancyList.module.scss';
 
 export const VacancyListStar = ({
+    id,
     vacancy,
     favorites,
     handleToggleFavorite,
-    id,
 }) => {
     return (
         <div
