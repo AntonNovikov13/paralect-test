@@ -1,7 +1,8 @@
 import React from 'react';
-import { VacancyListStar } from './VacancyListStar';
 import { VacancyListCard } from './VacancyListCard';
 import { EmptyPage } from '../../../../pages/emptyPage/EmptyPage';
+import { Star } from '../../star/Star';
+import styles from './VacancyList.module.scss';
 
 export const VacancyList = ({
     currentVacancies,
@@ -32,12 +33,14 @@ export const VacancyList = ({
                                 type_of_work={type_of_work}
                                 town={town}
                             />
-                            <VacancyListStar
-                                favorites={favorites}
-                                handleToggleFavorite={handleToggleFavorite}
-                                id={id}
-                                vacancy={vacancy}
-                            />
+                            <div className={styles.vacancylist}>
+                                <Star
+                                    id={id}
+                                    vacancy={vacancy}
+                                    favorites={favorites}
+                                    handleToggleFavorite={handleToggleFavorite}
+                                />
+                            </div>
                         </div>
                     );
                 })

@@ -17,6 +17,7 @@
     border: 1px solid #eaebed;
     border-radius: 12px;
     background: #ffffff;
+    height: 137px;
     padding: 24px;
 }
 .vacancy__description {
@@ -91,18 +92,25 @@
     padding-right: 11.33px;
 }
 
-.addtoFavotire_btn {
-    width: 22px;
-    height: 22px;
-    position: relative;
-    outline: none;
-    cursor: pointer;
-}
-
 .vacancy__description_child {
     color: black;
 }
 
 .location__class {
     font-weight: 400;
+}
+
+.addtoFavorite_btn {
+    width: 22px;
+    height: 22px;
+    outline: none;
+    cursor: pointer;
+}
+
+.vacancypage {
+    transform: translate(700px, -72px);
+    width: 22px;
+    height: 22px;
+    outline: none;
+    cursor: pointer;
 }

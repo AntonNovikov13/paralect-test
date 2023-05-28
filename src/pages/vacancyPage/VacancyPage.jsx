@@ -1,10 +1,11 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { VacancyPageDescription } from './VacancyPageDescription';
-import { VacancyPageProfession } from './VacancyPageProfession';
-import { VacancyPageSalaryWork } from './VacancyPageSalaryWork';
-import { VacancyPageLocationTown } from './VacancyPageLocationTown';
-import styles from './VacancyPage.module.scss';
+import { VacancyPageDescription } from '../../components/main/vacancy/VacancyPageDescription';
+import { VacancyPageProfession } from '../../components/main/vacancy/VacancyPageProfession';
+import { VacancyPageSalaryWork } from '../../components/main/vacancy/VacancyPageSalaryWork';
+import { VacancyPageLocationTown } from '../../components/main/vacancy/VacancyPageLocationTown';
+import { Star } from '../../components/main/star/Star';
+import styles from '../../components/main/vacancy/VacancyPage.module.scss';
 
 export const VacancyPage = ({ vacancies, favorites, handleToggleFavorite }) => {
     const location = useLocation();
@@ -31,11 +32,17 @@ export const VacancyPage = ({ vacancies, favorites, handleToggleFavorite }) => {
                             <div className={styles.vacancy__header}>
                                 <VacancyPageProfession
                                     profession={profession}
-                                    id={id}
-                                    vacancy={vacancy}
-                                    favorites={favorites}
-                                    handleToggleFavorite={handleToggleFavorite}
                                 />
+                                <div className={styles.vacancypage}>
+                                    <Star
+                                        id={id}
+                                        vacancy={vacancy}
+                                        favorites={favorites}
+                                        handleToggleFavorite={
+                                            handleToggleFavorite
+                                        }
+                                    />
+                                </div>
                                 <VacancyPageSalaryWork
                                     payment_from={payment_from}
                                     payment_to={payment_to}

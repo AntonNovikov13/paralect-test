@@ -2,10 +2,11 @@
 * {
     font-family: 'Inter', sans-serif;
 }
-.favorites__list {
+
+.favorites__list_parent {
     width: 773px;
     height: 596px;
-    margin: 40px auto;
+    margin: 40px auto 180px;
 }
 
 .favorites__list_item {
@@ -14,8 +15,7 @@
     justify-content: center;
     max-width: 100%;
     height: 137px;
-    padding: 24px;
-    height: auto;
+    padding: 12px 0 12px 24px;
     background: #ffffff;
     border: 1px solid #eaebed;
     border-radius: 12px;
@@ -33,6 +33,9 @@
     margin-bottom: 13px;
 }
 
+.favorites_name {
+    width: 100%;
+}
 .favorites_name,
 .favorites_salary_from_to,
 .favorites_location,
@@ -65,10 +68,15 @@
     padding-right: 11.33px;
 }
 
-.addtoFavotire_btn {
-    position: relative;
-    left: 727px;
-    bottom: 159px;
+.addtoFavorite_btn {
+    width: 22px;
+    height: 22px;
+    outline: none;
+    cursor: pointer;
+}
+
+.favoritelist {
+    transform: translate(730px, -140px);
     width: 22px;
     height: 22px;
     outline: none;

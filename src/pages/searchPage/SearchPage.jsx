@@ -9,6 +9,9 @@ export const SearchPage = ({
     vacancies,
     setVacancies,
     handleToggleFavorite,
+    currentPage,
+    setCurrentPage,
+    vacanciesPerPage,
     // accessToken,
 }) => {
     const [industryCatalog, setIndustryCatalog] = useState([]);
@@ -108,6 +111,9 @@ export const SearchPage = ({
                     favorites={favorites}
                     openLoader={openLoader}
                     handleToggleFavorite={handleToggleFavorite}
+                    currentPage={currentPage}
+                    setCurrentPage={setCurrentPage}
+                    vacanciesPerPage={vacanciesPerPage}
                 />
             </main>
         </>

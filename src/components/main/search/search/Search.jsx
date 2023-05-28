@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { VacancyList } from '../vacancyList/VacancyList';
 import { Loader } from './loader/Loader';
 import { Pagination } from '../../pagination/Pagination';
 import styles from './Search.module.scss';
 import { InputForm } from './InputForm';
+import { setSelectedPage } from '../../../../service/service';
+import { getPagination } from '../../../../service/service';
+
 export const Search = ({
     searchValue,
     setSearchValue,
@@ -12,29 +15,23 @@ export const Search = ({
     favorites,
     openLoader,
     handleToggleFavorite,
+    currentPage,
+    setCurrentPage,
+    vacanciesPerPage,
 }) => {
-    const [currentPage, setCurrentPage] = useState(1);
-    const [vacanciesPerPage] = useState(4);
-
-    const totalPages = Math.ceil(vacancies.length / vacanciesPerPage);
-    const firstVacancyIndex = (currentPage - 1) * vacanciesPerPage;
-    const lastVacancyIndex = firstVacancyIndex + vacanciesPerPage;
-    const currentVacancies = vacancies.slice(
-        firstVacancyIndex,
-        lastVacancyIndex
+    const { totalPages, currentVacancies } = getPagination(
+        vacancies,
+        currentPage,
+        vacanciesPerPage
     );
 
     const changeCurrentPage = (newPage) => setCurrentPage(newPage);
 
-    const setSelectedPage = (selectedPage) => {
-        if (selectedPage >= 1 && selectedPage <= totalPages) {
-            setCurrentPage(selectedPage);
-        }
-    };
+    const setPrevPage = () =>
+        setSelectedPage(currentPage - 1, setCurrentPage, totalPages);
 
-    const setPrevPage = () => setSelectedPage(currentPage - 1);
-
-    const setNextPage = () => setSelectedPage(currentPage + 1);
+    const setNextPage = () =>
+        setSelectedPage(currentPage + 1, setCurrentPage, totalPages);
 
     return (
         <>
@@ -56,8 +53,8 @@ export const Search = ({
                         />
                         <Pagination
                             totalPages={totalPages}
-                            changeCurrentPage={changeCurrentPage}
                             currentPage={currentPage}
+                            changeCurrentPage={changeCurrentPage}
                             setPrevPage={setPrevPage}
                             setNextPage={setNextPage}
                         />

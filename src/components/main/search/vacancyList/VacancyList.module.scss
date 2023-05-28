@@ -62,7 +62,6 @@
     font-weight: 600;
     font-size: 16px;
     color: black;
-    
 }
 .vacancy_salary_from_to,
 .dot {
@@ -77,12 +76,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
-.addtoFavotire_btn {
-    position: relative;
-    left: 726px;
-    bottom: 115px;
+.addtoFavorite_btn {
+    width: 22px;
+    height: 22px;
+    outline: none;
+    cursor: pointer;
+}
+
+.vacancylist {
+    transform: translate(730px, -112px);
     width: 22px;
     height: 22px;
     outline: none;

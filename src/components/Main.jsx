@@ -12,6 +12,8 @@ const Main = () => {
     const [accessToken, setAccessToken] = useState('');
     const [vacancies, setVacancies] = useState([]);
     const [favorites, setFavorites] = useLocalStorage('favorites', []);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [vacanciesPerPage] = useState(4);
 
     const handleToggleFavorite = (currenVacancy) => {
         const favorite = favorites.find(({ id }) => id === currenVacancy.id);
@@ -38,9 +40,11 @@ const Main = () => {
                                 vacancies={vacancies}
                                 setVacancies={setVacancies}
                                 favorites={favorites}
-                                setFavorites={setFavorites}
                                 handleToggleFavorite={handleToggleFavorite}
                                 accessToken={accessToken}
+                                currentPage={currentPage}
+                                setCurrentPage={setCurrentPage}
+                                vacanciesPerPage={vacanciesPerPage}
                             />
                         }
                     />
@@ -59,8 +63,10 @@ const Main = () => {
                         element={
                             <FavoritesListPage
                                 favorites={favorites}
-                                setFavorites={setFavorites}
                                 handleToggleFavorite={handleToggleFavorite}
+                                currentPage={currentPage}
+                                setCurrentPage={setCurrentPage}
+                                vacanciesPerPage={vacanciesPerPage}
                             />
                         }
                     />

@@ -1,16 +1,16 @@
 import React from 'react';
 import { FavoriteItemCard } from './FavoriteItemCard';
-import { FavoriteItemStar } from './FavoriteItemStar';
+import { Star } from '../star/Star';
 import styles from './FavoritesList.module.scss';
 
 export const FavoriteListItem = ({
     favorites,
     handleToggleFavorite,
-    setFavorites,
+    currentVacancies,
 }) => {
     return (
-        <div className={styles.favorites__list}>
-            {favorites.map((vacancy) => {
+        <div>
+            {currentVacancies.map((vacancy) => {
                 const {
                     id,
                     profession,
@@ -31,13 +31,14 @@ export const FavoriteListItem = ({
                             type_of_work={type_of_work}
                             town={town}
                         />
-                        <FavoriteItemStar
-                            vacancy={vacancy}
-                            id={id}
-                            favorites={favorites}
-                            setFavorites={setFavorites}
-                            handleToggleFavorite={handleToggleFavorite}
-                        />
+                        <div className={styles.favoritelist}>
+                            <Star
+                                id={id}
+                                vacancy={vacancy}
+                                favorites={favorites}
+                                handleToggleFavorite={handleToggleFavorite}
+                            />
+                        </div>
                     </div>
                 );
             })}
