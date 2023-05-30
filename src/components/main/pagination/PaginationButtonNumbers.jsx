@@ -6,26 +6,28 @@ export const PaginationButtonNumbers = ({
     currentPage,
     changeCurrentPage,
 }) => {
+    const visiblePages = [...Array(totalPages).keys()].slice(
+        currentPage,
+        currentPage + 3
+    );
+
     return (
         <>
-            {[...Array(totalPages).keys()]
-                .slice(currentPage, currentPage + 3)
-                .map((number) => (
-                    <li key={number}>
-                        <button
-                            data-page={number}
-                            onClick={() => changeCurrentPage(number)}
-                            className={`${styles.page__item} 
+            {visiblePages.map((number) => (
+                <li key={number}>
+                    <button
+                        onClick={() => changeCurrentPage(number)}
+                        className={`${styles.page__item} 
                                     ${
                                         currentPage === number
                                             ? styles.activeClassName
                                             : ''
                                     }`}
-                        >
-                            {number}
-                        </button>
-                    </li>
-                ))}
+                    >
+                        {number}
+                    </button>
+                </li>
+            ))}
         </>
     );
 };

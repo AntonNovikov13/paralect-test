@@ -31,7 +31,6 @@ export const VacancyListCard = ({
                         {type_of_work.title}
                     </p>
                 </div>
-
                 <div className={styles.vacancy__list_item_location_town}>
                     <img
                         src={require('../../../../icons/location.png')}

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import axios from 'axios';
 import {
@@ -10,7 +10,9 @@ import {
     password,
 } from '../../config/config';
 
-export const Authorization = ({ setAccessToken }) => {
+export const Authorization = () => {
+    const [accessToken, setAccessToken] = useState('');
+
     useEffect(() => {
         axios
             .get(`${base_url}/2.0/oauth2/password/`, {

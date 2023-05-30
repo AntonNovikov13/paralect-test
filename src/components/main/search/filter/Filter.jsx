@@ -7,7 +7,6 @@ import { FilterApplyButton } from './FilterApplyButton';
 import styles from './Filter.module.scss';
 
 export const Filter = ({
-    inputsClearHandler,
     industryCatalog,
     salaryFrom,
     setSalaryFrom,
@@ -16,12 +15,18 @@ export const Filter = ({
     industryValue,
     setIndustryValue,
     getVacancies,
+    setLoading,
+    setVacancies,
 }) => {
     return (
         <div className={styles.filter}>
             <div className={styles.filter__header}>
                 <p className={styles.filter__header_name}>Фильтры</p>
-                <ButtonReset inputsClearHandler={inputsClearHandler} />
+                <ButtonReset
+                    setSalaryFrom={setSalaryFrom}
+                    setSalaryTo={setSalaryTo}
+                    setIndustryValue={setIndustryValue}
+                />
             </div>
             <IndustryCatalog
                 industryCatalog={industryCatalog}
@@ -39,6 +44,8 @@ export const Filter = ({
                 salaryTo={salaryTo}
                 industryValue={industryValue}
                 getVacancies={getVacancies}
+                setLoading={setLoading}
+                setVacancies={setVacancies}
             />
         </div>
     );

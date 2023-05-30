@@ -4,7 +4,7 @@ html {
     height: 1000px;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 body {
     margin: 0;
@@ -34,9 +34,10 @@ button {
     cursor: pointer;
 }
 
-.addtoFavotire_btn {
+.addtoFavorire_btn {
     width: 22px;
     height: 22px;
     outline: none;
     cursor: pointer;
 }
+

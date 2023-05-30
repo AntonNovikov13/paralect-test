@@ -6,9 +6,16 @@ select {
     border: 1px solid #d5d6dc;
     border-radius: 5px;
     outline: none;
-    padding: 0 0 0 5px;
+    padding: 0 0 0 6px;
     color: #acadb9;
     font-size: 14px;
+}
+select:hover {
+    border: 1px solid #5e96fc;
+    transition: cubic-bezier(1, 0, 0, 1) 0.3s all;
+}
+select:focus {
+    border: 1px solid #5e96fc;
 }
 
 .title {

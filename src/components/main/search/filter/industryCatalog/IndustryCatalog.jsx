@@ -2,8 +2,8 @@ import React from 'react';
 import styles from './IndustryCatalog.module.scss';
 
 export const IndustryCatalog = ({
-    industryValue,
     industryCatalog,
+    industryValue,
     setIndustryValue,
 }) => {
     return (
@@ -21,12 +21,12 @@ export const IndustryCatalog = ({
                         value={industryValue}
                         required
                     >
-                        <option value=''>Выберите отрасль</option>
+                        <option value='' className='select__option'>Выберите отрасль</option>
                         {industryCatalog.map((item) => (
                             <option
                                 key={item.key}
                                 value={item.key}
-                                className={styles.option__list}
+                                className={styles.select__option}
                             >
                                 {item.title}
                             </option>

@@ -39,11 +39,13 @@
     font-size: 16px;
     line-height: 20px;
     font-weight: 500;
+    color: black;
 }
 .header__child_favorites {
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
+    color: black;
 }
 
 .header__child_search,
@@ -53,4 +55,13 @@
 .header__child_search:visited,
 .header__child_favorites:visited {
     color: black;
+}
+
+.header__child_search:hover {
+    color: #5e96fc;
+    transition: cubic-bezier(1, 0, 0, 1) 0.3s all;
+}
+.header__child_favorites:hover {
+    color: #5e96fc;
+    transition: cubic-bezier(1, 0, 0, 1) 0.3s all;
 }

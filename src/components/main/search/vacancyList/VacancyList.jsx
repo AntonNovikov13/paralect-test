@@ -4,11 +4,7 @@ import { EmptyPage } from '../../../../pages/emptyPage/EmptyPage';
 import { Star } from '../../star/Star';
 import styles from './VacancyList.module.scss';
 
-export const VacancyList = ({
-    currentVacancies,
-    favorites,
-    handleToggleFavorite,
-}) => {
+export const VacancyList = ({ currentVacancies, favorites, setFavorites }) => {
     return (
         <>
             {currentVacancies.length !== 0 ? (
@@ -38,7 +34,7 @@ export const VacancyList = ({
                                     id={id}
                                     vacancy={vacancy}
                                     favorites={favorites}
-                                    handleToggleFavorite={handleToggleFavorite}
+                                    setFavorites={setFavorites}
                                 />
                             </div>
                         </div>

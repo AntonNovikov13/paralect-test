@@ -3,14 +3,15 @@ import styles from './Pagination.module.scss';
 import { PaginationButtonLeft } from './PaginationButtonLeft';
 import { PaginationButtonNumbers } from './PaginationButtonNumbers';
 import { PaginationButtonRight } from './PaginationButtonRight';
+import { setSelectedPage } from '../../../service/service';
 
-export const Pagination = ({
-    totalPages,
-    currentPage,
-    changeCurrentPage,
-    setPrevPage,
-    setNextPage,
-}) => {
+export const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
+    const changeCurrentPage = (newPage) => setCurrentPage(newPage);
+
+    const setPrevPage = () => setSelectedPage(currentPage - 1, setCurrentPage, totalPages);
+
+    const setNextPage = () => setSelectedPage(currentPage + 1, setCurrentPage, totalPages);
+
     return (
         <div className={styles.pagination}>
             <ul className={styles.pagination__list}>

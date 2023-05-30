@@ -20,6 +20,7 @@
 .page__item_arrow_right:hover {
     background-color: #5e96fc;
     color: #ffffff;
+    transition: cubic-bezier(1, 0, 0, 1) 0.2s all;
 }
 
 .activeClassName {

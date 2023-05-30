@@ -28,7 +28,13 @@
     font-style: normal;
     font-weight: 500;
 }
-
+.filter__header_btn:hover {
+    color: #92c1ff;
+    transition: cubic-bezier(1, 0, 0, 1) 0.3s all;
+}
+.filter__header_btn:active {
+    color: #5e96fc;
+}
 .title {
     font-style: normal;
     font-weight: 700;
@@ -40,13 +46,23 @@
 }
 
 .filter__inputs {
-    width: 275px;
+    max-width: 275px;
+    max-height: 42px;
     height: 42px;
     border: 1px solid #d5d6dc;
     border-radius: 5px;
     outline: none;
     color: #acadb9;
     font-size: 14px;
+    padding-left: 12px;
+}
+.filter__inputs:focus {
+    color: #232134;
+    border: 1px solid #5e96fc;
+}
+.filter__inputs:hover {
+    border: 1px solid #5e96fc;
+    transition: cubic-bezier(1, 0, 0, 1) 0.3s all;
 }
 
 .apply__button {
@@ -58,4 +74,12 @@
     border-radius: 8px;
     margin-top: 20px;
     font-weight: 500;
+}
+
+.apply__button:hover {
+    background-color: #92c1ff;
+    transition: cubic-bezier(1, 0, 0, 1) 0.3s all;
+}
+.apply__button:active {
+    background-color: #3b7cd3;
 }
